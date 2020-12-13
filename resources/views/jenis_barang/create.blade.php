@@ -14,11 +14,20 @@
                             @include('partials.alert_error')
                             <div class="form-group">
                                 <label for="jenis_bahan">Jenis Bahan</label>
-                                <input type="text" name="jenis_bahan" id="jenis_bahan" class="form-control">
+                                <select name="jenis_bahan" id="jenis_bahan" class="form-control select2">
+                                    <option selected disabled>Pilih satu</option>
+                                    <option value="Raw Material">Raw Material</option>
+                                    <option value="Finished Material">Finished Material</option>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label for="nama_bahan">Nama Bahan</label>
-                                <input type="text" name="nama_bahan" id="nama_bahan" class="form-control">
+                                <select name="nama_bahan" id="nama_bahan" class="form-control select2">
+                                    <option selected disabled>Pilih satu</option>
+                                    <option value="Kulit Sapi Coklat">Kulit Sapi Coklat</option>
+                                    <option value="Kulit Sapi Hitam">Kulit Sapi Hitam</option>
+                                    <option value="Kulit Sapi Silver">Kulit Sapi Silver</option>
+                                </select>
                             </div>
                             <div class="form-group float-right">
                                 <button class="btn btn-primary">Tambah</button>

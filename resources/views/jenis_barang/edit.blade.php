@@ -16,11 +16,30 @@
                             @method('PUT')
                             <div class="form-group">
                                 <label for="jenis_bahan">Jenis Bahan</label>
-                                <input type="text" name="jenis_bahan" id="jenis_bahan" class="form-control" value="{{ $jenis_barang->jenis_bahan }}">
+                                <select name="jenis_bahan" id="jenis_bahan" class="form-control select2">
+                                    <option selected disabled>Pilih satu</option>
+                                    <option value="Raw Material" {{ 'Raw Material' == $jenis_barang->jenis_bahan ? 'selected' : '' }}>
+                                        Raw Material
+                                    </option>
+                                    <option value="Finished Material" {{ 'Finished Material' == $jenis_barang->jenis_bahan ? 'selected' : '' }}>
+                                        Finished Material
+                                    </option>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label for="nama_bahan">Nama Bahan</label>
-                                <input type="text" name="nama_bahan" id="nama_bahan" class="form-control" value="{{ $jenis_barang->nama_bahan }}">
+                                <select name="nama_bahan" id="nama_bahan" class="form-control select2">
+                                    <option selected disabled>Pilih satu</option>
+                                    <option value="Kulit Sapi Coklat" {{ 'Kulit Sapi Coklat' == $jenis_barang->nama_bahan ? 'selected' : '' }}>
+                                        Kulit Sapi Coklat
+                                    </option>
+                                    <option value="Kulit Sapi Hitam" {{ 'Kulit Sapi Hitam' == $jenis_barang->nama_bahan ? 'selected' : '' }}>
+                                        Kulit Sapi Hitam
+                                    </option>
+                                    <option value="Kulit Sapi Silver" {{ 'Kulit Sapi Silver' == $jenis_barang->nama_bahan ? 'selected' : '' }}>
+                                        Kulit Sapi Silver
+                                    </option>
+                                </select>
                             </div>
                             <div class="form-group row float-right d-block">
                                 <button class="btn btn-danger  btn-md "

@@ -1,0 +1,373 @@
+.loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #F5F8FA;
+    z-index: 9998;
+    text-align: center;
+}
+
+.plane-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.counter-title {
+    font-size: 12px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.activity-sailing:before {
+    color: #03a9f4;
+    background: #fff;
+    content: "\eaa9";
+    left: -8px;
+    position: absolute;
+    top: 0;
+    width: 10px;
+    font-family: paperIcons;
+    font-size: 20px;
+}
+
+.activity-preparing:before {
+    color: #f39c12;
+    background: #fff;
+    content: "\eaa9";
+    left: -8px;
+    position: absolute;
+    top: 0;
+    width: 10px;
+    font-family: paperIcons;
+    font-size: 20px;
+}
+
+.activity-finished:before {
+    color: #f4052c;
+    background: #fff;
+    content: "\eaa9";
+    left: -8px;
+    position: absolute;
+    top: 0;
+    width: 10px;
+    font-family: paperIcons;
+    font-size: 20px;
+}
+
+.scroll-box {
+    overflow-y: scroll;
+    height: 300px;
+    padding: 1rem
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    color: #ffffff;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: #03a9f4;
+    border-radius: 20px;
+    cursor: default;
+    float: left;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding: 0 10px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, .1);
+    color: #ffffff;
+}
+
+.select2-selection__rendered {
+    line-height: 24px !important;
+    font-size: 1em !important;
+    color: #43484d !important;
+}
+
+.select2-selection__arrow {
+    height: 28px !important;
+}
+
+.select2-selection {
+    height: 38px !important;
+}
+
+.select2-results__option {
+    font-size: 1em !important;
+}
+
+.offcanvas .sidebar-menu li a.active {
+    background-color: #f8f9facc;
+}
+
+/*Checkbox - Switch Power*/
+.switch-button {
+
+}
+
+.switch-button input[type="checkbox"] {
+    display: none;
+}
+
+.switch-button label {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.button-siren, .switch-button label:before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    vertical-align: bottom;
+    line-height: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    font-family: "FontAwesome";
+    border-radius: 30px;
+}
+
+.switch-button input[type="checkbox"] + label::before {
+    padding: 20px 10px;
+    font-size: 30px;
+    color: grey;
+    cursor: pointer;
+    /*margin-bottom: 5px;*/
+}
+
+.switch-button input[type="checkbox"]:checked + label::before {
+    box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.075);
+}
+
+/*Custom Round Switch Button Appearance*/
+.switch-button.switch-secure input[type="checkbox"] + label::before {
+    content: "\f132";
+}
+.switch-button.switch-secure input[type="checkbox"]:checked + label::before {
+    color: dodgerblue;
+}
+
+.switch-button.switch-power input[type="checkbox"] + label::before {
+    content: "\f011";
+}
+.switch-button.switch-power input[type="checkbox"]:checked + label::before {
+    color: #7dc855;
+}
+
+.switch-button.switch-fire input[type="checkbox"] + label::before {
+    content: "\f06d";
+}
+.switch-button.switch-fire input[type="checkbox"]:checked + label::before {
+    color: #d6352c;
+}
+
+.switch-button.switch-bell input[type="checkbox"] + label::before {
+    content: "\f0a2";
+}
+.switch-button.switch-bell input[type="checkbox"]:checked + label::before {
+    color: #ea702a;
+}
+
+
+.switch-button input[type="checkbox"][disabled] + label::before {
+    background-color: #eee;
+    color: #bbb;
+}
+
+/*Switch - MCB Switch*/
+.material-switch.mcb-switch {
+    height: 32px;
+}
+
+.material-switch.mcb-switch > label {
+    width: 60px;
+    margin-bottom: 0;
+}
+
+.material-switch.mcb-switch > label::before {
+    background: #555;
+    border-radius: 2px;
+    height: 32px;
+    margin-top: -16px;
+    width: 60px;
+}
+
+.material-switch.mcb-switch > label::after {
+    border-radius: 2px;
+    left: 4px;
+}
+
+.material-switch.mcb-switch > input[type=checkbox]:checked + label::after {
+    left: 32px;
+}
+
+.material-switch.mcb-switch input[type="checkbox"][disabled] + label::before {
+    background-color: #000;
+}
+
+.material-switch.mcb-switch input[type="checkbox"][disabled] + label::after {
+    background-color: #ddd;
+    box-shadow: none;
+}
+
+/*Button - Siren*/
+.button-siren {
+    background: white;
+    position: relative;
+    cursor: pointer;
+}
+
+.card-body {
+    z-index: 1;
+}
+
+.button-siren::before {
+    background: #ccc;
+    content: "";
+    position: absolute;
+    transition: all .1s ease-in-out;
+    z-index: -1;
+    opacity: .0;
+}
+
+.button-siren:focus::before {
+    animation: breath .3s;
+    opacity: .5;
+}
+
+.button-siren.siren-ripple:focus::before {
+    animation: breath 1s infinite;
+    animation-delay: .7s;
+    opacity: .5;
+}
+
+@keyframes breath {
+    0%, 100% {
+        width: inherit;
+        height: inherit;
+        top: -1px;
+        left: -1px;
+        border-radius: inherit;
+    }
+    50% {
+        width: 70px;
+        height: 70px;
+        top: -6px;
+        left: -6px;
+        border-radius: 35px;
+    }
+}
+
+.button-siren:focus {
+    outline: none;
+}
+
+.button-siren:active {
+    box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.075);
+}
+
+.button-siren + label {
+    margin-bottom: 0;
+    /*margin-top: 5px;*/
+}
+
+.button-siren .icon {
+    font-size: 30px;
+    color: grey;
+    transition: color 0.5s;
+}
+
+.button-siren:active .icon {
+    transition: color 0s;
+}
+
+.button-siren:active.siren-fire .icon, .button-siren.siren-ripple:focus.siren-fire .icon {
+    color: #d6352c;
+}
+
+.button-siren:active.siren-stop .icon, .button-siren.siren-ripple:focus.siren-stop .icon {
+    color: #333333;
+}
+
+.button-siren:active.siren-general .icon, .button-siren.siren-ripple:focus.siren-general .icon {
+    color: #ea702a;
+}
+
+.button-siren.siren-fire::before {
+    background: #d6352c;
+}
+
+.button-siren.siren-stop::before {
+    background: #333333;
+}
+
+.button-siren.siren-general::before {
+    background: #ea702a;
+}
+
+
+/* Mobile View */
+@media screen and (max-width: 767px) {
+    div.dataTables_wrapper div.dataTables_filter,
+    div.dataTables_wrapper div.dataTables_info,
+    div.dataTables_wrapper div.dataTables_length,
+    div.dataTables_wrapper div.dataTables_paginate {
+        text-align: left;
+    }
+
+    div.dataTables_wrapper div.col-md-6, div.dataTables_wrapper div.col-sm-12, div.dataTables_wrapper.container-fluid {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    div.dataTables_wrapper table.dataTable {
+        border-collapse: collapse !important;
+    }
+
+    div.dataTables_wrapper .table-bordered td {
+        border: 0;
+        border-top: 1px solid #e1e8ee;
+    }
+
+    div.full-width.table-responsive {
+        margin-left: -1.25rem;
+        margin-right: -1.25rem;
+        width: calc(100% + 1.25rem + 1.25rem);
+    }
+
+    div.full-width div.dataTables_wrapper div.dataTables_filter,
+    div.full-width div.dataTables_wrapper div.dataTables_info,
+    div.full-width div.dataTables_wrapper div.dataTables_length,
+    div.full-width div.dataTables_wrapper div.dataTables_paginate {
+        padding-right: 1.25rem;
+        padding-left: 1.25rem;
+    }
+
+    .card-header.white {
+        background-color: #f7f7f7 !important;
+    }
+
+    .hidden-xs {
+        display: none !important;
+    }
+
+    .table td.fit,
+    .table th.fit {
+        white-space: nowrap;
+        width: 1%;
+    }
+
+    .container-fluid.full-width {
+        padding: 0;
+    }
+
+    .img-border{
+        padding: 1px;
+    }
+}

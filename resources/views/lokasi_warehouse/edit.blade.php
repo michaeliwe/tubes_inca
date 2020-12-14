@@ -20,7 +20,7 @@
                                     <option selected disabled>Pilih satu</option>
                                     @foreach($data_transaksi as $item)
                                         <option value="{{ $item['id_pegawai'] }}" {{ isset($data_transaksi) ? ($item['id_pegawai'] == $lokasi_warehouse->id_pegawai ? 'selected' : '') : '' }}>
-                                            {{ $item['nama_pegawai'] }}
+                                            {{ $item['id_pegawai'] . " - " . $item['nama_pegawai'] }}
                                         </option>
                                     @endforeach
                                 </select>

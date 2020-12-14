@@ -28,7 +28,7 @@ class lokasiWarehouseController extends Controller
     public function create()
     {
         $client = new Client();
-        $endpoint = "https://procurementdivision.000webhostapp.com/request.php";
+        $endpoint = "https://procurementdivision.000webhostapp.com/pegawai.php";
         $response = $client->request('GET', $endpoint);
         $responseBody = $response->getBody()->getContents();
 
@@ -79,7 +79,7 @@ class lokasiWarehouseController extends Controller
     public function edit($id)
     {
         $client = new Client();
-        $endpoint = "https://procurementdivision.000webhostapp.com/request.php";
+        $endpoint = "https://procurementdivision.000webhostapp.com/pegawai.php";
         $response = $client->request('GET', $endpoint);
         $responseBody = $response->getBody()->getContents();
 

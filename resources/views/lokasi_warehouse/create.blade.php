@@ -17,7 +17,7 @@
                                 <select name="id_pegawai" id="id_pegawai" class="form-control select2">
                                     <option selected disabled>Pilih satu</option>
                                     @foreach($data_transaksi as $item)
-                                        <option value="{{ $item['id_pegawai'] }}">{{ $item['id_pegawai'] }}</option>
+                                        <option value="{{ $item['id_pegawai'] }}">{{ $item['nama_pegawai'] }}</option>
                                     @endforeach
                                 </select>
                             </div>
